@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Variables CSS */
+}
+body {
+  margin: 10px auto;
+  display: flex;
+}
+.slider-container {
+  width: 80vw;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 40vh;
+  position: relative;
+  border-radius: 10px;
+  /* Wont be able to see item */
+  overflow: hidden;
+  margin-top: 4rem;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.18);
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  background: #ff9500;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+
+  /* Position all slides center */
+  position: absolute;
+  display: grid;
+  place-items: center;
+  transition: all 0.35s ease-in-out;
+  text-align: center;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide-details {
+  color: #fff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+}
+.slide-details img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.btn-container {
+  position: absolute;
+  bottom: 42%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.btn-container button {
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+/* Setup in JS */
+/* Position in vertical line */
+/* .slide:nth-child(1) {
+  left: 0%;
+}
+.slide:nth-child(2) {
+  left: 100%;
+}
+.slide:nth-child(3) {
+  left: 200%;
+}
+.slide:nth-child(4) {
+  left: 300%;
+}
+
+/* Move items in x direction */
+/* .slide {
+  transform: translateX(-100%);
+} */
